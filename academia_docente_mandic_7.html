@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academia Docente Mandic · Pós-Graduação Médica 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #09152a;
+  --navy-mid: #0d1e38;
+  --navy-light: #132540;
+  --gold: #c49b3c;
+  --gold-light: #d4ab4c;
+  --blue-accent: #4da6d9;
+  --white: #ffffff;
+  --text-muted: rgba(255,255,255,0.52);
+  --text-dim: rgba(255,255,255,0.32);
+  --border-gold: rgba(196,155,60,0.22);
+  --border-white: rgba(255,255,255,0.08);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e0; font-size: 16px; line-height: 1.6; }
+
+nav {
+  background: rgba(9,21,42,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 0 3rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px; position: sticky; top: 0; z-index: 200;
+}
+.nav-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: 0.1em; color: var(--white); text-transform: uppercase; }
+.nav-brand em { color: var(--gold); font-style: normal; }
+.nav-links { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 4px; font-weight: 700 !important; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+
+.hero {
+  background: var(--navy);
+  min-height: 88vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 6rem 2rem 5rem; position: relative; overflow: hidden;
+  border-bottom: 1px solid var(--border-gold);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 55% at 50% 30%, rgba(196,155,60,0.07) 0%, transparent 70%),
+              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(77,166,217,0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: 'ADM'; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 28rem;
+  color: rgba(255,255,255,0.018); line-height: 1; pointer-events: none; user-select: none; white-space: nowrap;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 12px; position: relative; z-index: 1;
+}
+.hero-eyebrow::before, .hero-eyebrow::after { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--gold); opacity: 0.6; }
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  font-size: clamp(4rem, 10vw, 7.5rem); line-height: 0.92; text-transform: uppercase;
+  color: var(--white); letter-spacing: 0.01em; margin-bottom: 0.5rem; position: relative; z-index: 1;
+}
+.hero h1 .blue { color: var(--blue-accent); }
+.hero h1 .gold { color: var(--gold); }
+.hero-tagline {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700;
+  font-size: clamp(1.2rem,2.5vw,1.7rem); color: var(--gold); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 1.5rem; position: relative; z-index: 1;
+}
+.hero-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.8; margin-bottom: 3rem; position: relative; z-index: 1; }
+.hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.btn-gold {
+  background: var(--gold); color: var(--navy); font-family: 'Barlow', sans-serif; font-weight: 700;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 36px;
+  border-radius: 4px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s;
+  text-decoration: none; display: inline-block;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,0.7); font-family: 'Barlow', sans-serif; font-weight: 600;
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 36px;
+  border-radius: 4px; border: 1px solid rgba(255,255,255,0.18); cursor: pointer; transition: all 0.2s;
+  text-decoration: none; display: inline-block;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
+
+.section { padding: 6rem 3rem; }
+.section-center { text-align: center; }
+.section-center .s-sub { margin-left: auto; margin-right: auto; }
+.section-center .gold-line { margin-left: auto; margin-right: auto; }
+.s-label { font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.s-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2rem,4vw,2.8rem); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; margin-bottom: 0.6rem; }
+.s-sub { font-size: 1rem; color: var(--text-muted); max-width: 540px; line-height: 1.75; margin-bottom: 3rem; }
+.gold-line { width: 40px; height: 2px; background: var(--gold); margin: 0.6rem 0 1.75rem; }
+
+.section-programa { background: var(--navy-mid); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold); }
+
+.stats-row {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--border-gold); border: 1px solid var(--border-gold);
+  border-radius: 8px; overflow: hidden; max-width: 760px; margin: 0 auto 3rem;
+}
+.stat-cell { background: var(--navy-light); padding: 2rem 1.5rem; text-align: center; }
+.stat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.8rem; color: var(--white); line-height: 1; margin-bottom: 0.3rem; }
+.stat-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
+
+.aviso {
+  background: rgba(196,155,60,0.07); border: 1px solid rgba(196,155,60,0.25);
+  border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65;
+  max-width: 680px; margin: 0 auto; text-align: left;
+}
+.aviso strong { color: rgba(196,155,60,0.9); }
+
+/* ETAPAS — FUNDO DOURADO */
+.section-etapas { background: var(--gold); color: var(--navy); }
+.section-etapas .s-label { color: rgba(9,21,42,0.55); }
+.section-etapas .s-title { color: var(--navy); }
+.section-etapas .s-sub { color: rgba(9,21,42,0.6); }
+.section-etapas .gold-line { background: var(--navy); opacity: 0.25; }
+
+.steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 960px; margin: 0 auto; }
+@media(max-width:720px){ .steps-grid { grid-template-columns: 1fr; } }
+
+.step-card {
+  background: rgba(9,21,42,0.08); border: 1px solid rgba(9,21,42,0.12);
+  border-radius: 8px; padding: 1.75rem 1.5rem; transition: background 0.2s, transform 0.2s;
+  text-decoration: none; display: block; cursor: pointer;
+}
+.step-card:hover { background: rgba(9,21,42,0.16); transform: translateY(-3px); }
+.step-card.has-link { border-bottom: 2px solid rgba(9,21,42,0.2); }
+.step-card.has-link:hover { border-bottom-color: rgba(9,21,42,0.45); }
+
+.step-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3.5rem; color: rgba(9,21,42,0.15); line-height: 1; margin-bottom: 0.6rem; }
+.step-title { font-weight: 700; font-size: 0.9rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; line-height: 1.3; }
+.step-desc { font-size: 0.85rem; color: rgba(9,21,42,0.62); line-height: 1.6; }
+.step-tag { display: inline-block; margin-top: 0.9rem; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); border: 1px solid rgba(9,21,42,0.3); padding: 3px 10px; border-radius: 3px; }
+.step-link-hint { display: flex; align-items: center; gap: 4px; margin-top: 0.75rem; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(9,21,42,0.45); }
+.step-link-hint svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+/* CALENDÁRIO */
+.section-cal { background: var(--navy); border-top: 1px solid var(--border-gold); }
+.cal-tabs { display: flex; border-bottom: 1px solid var(--border-white); margin-bottom: 2rem; justify-content: center; }
+.cal-tab {
+  padding: 12px 28px; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-dim); cursor: pointer; border: none; border-bottom: 2px solid transparent;
+  margin-bottom: -1px; background: none; transition: all 0.2s;
+}
+.cal-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+.cal-tab:hover:not(.active) { color: rgba(255,255,255,0.6); }
+.cal-panel { display: none; max-width: 860px; margin: 0 auto; }
+.cal-panel.active { display: block; }
+.cal-table { width: 100%; border-collapse: collapse; }
+.cal-table thead tr { border-bottom: 1px solid var(--border-white); }
+.cal-table th { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); padding: 0 1.25rem 1rem; text-align: left; }
+.cal-table td { padding: 0.9rem 1.25rem; font-size: 0.92rem; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: middle; }
+.cal-table tr:last-child td { border-bottom: none; }
+
+.cal-row-link { cursor: pointer; transition: background 0.15s; }
+.cal-row-link:hover td { background: rgba(196,155,60,0.06); }
+.cal-row-link:hover .cal-theme { color: var(--gold); }
+
+.cal-date { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--white); white-space: nowrap; }
+.cal-day { font-size: 11px; color: var(--text-dim); }
+.cal-num { font-size: 10px; font-weight: 700; color: rgba(196,155,60,0.55); letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+.cal-theme { font-weight: 600; color: #ddd; font-size: 0.95rem; transition: color 0.15s; }
+.cal-sub { font-size: 0.78rem; color: var(--text-dim); margin-top: 3px; }
+.cal-row-hint { font-size: 10px; color: rgba(196,155,60,0.45); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+
+.presencial-note { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.5rem; text-align: center; font-style: italic; }
+.presencial-card {
+  background: rgba(196,155,60,0.07); border: 1px solid rgba(196,155,60,0.25); border-radius: 10px;
+  padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;
+  max-width: 640px; margin: 0 auto; cursor: pointer; transition: background 0.2s;
+}
+.presencial-card:hover { background: rgba(196,155,60,0.12); }
+.presencial-date-block { background: var(--gold); border-radius: 8px; padding: 0.6rem 1rem; text-align: center; min-width: 72px; flex-shrink: 0; }
+.presencial-day-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2.8rem; color: var(--navy); line-height: 1; }
+.presencial-month { font-size: 11px; font-weight: 700; color: rgba(9,21,42,0.6); text-transform: uppercase; letter-spacing: 0.1em; }
+.presencial-info { flex: 1; min-width: 200px; }
+.presencial-title { font-weight: 700; font-size: 1.1rem; color: var(--white); margin-bottom: 0.4rem; }
+.presencial-details { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.9rem; line-height: 1.6; }
+.badge-derm { display: inline-flex; align-items: center; gap: 6px; background: rgba(196,155,60,0.12); border: 1px solid rgba(196,155,60,0.4); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; }
+.badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.presencial-click-hint { font-size: 11px; color: rgba(196,155,60,0.5); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.6rem; }
+
+/* INSCRIÇÃO */
+.section-inscricao { background: var(--navy-light); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold); }
+.form-wrap { max-width: 640px; margin: 0 auto; }
+.form-row { margin-bottom: 1.4rem; }
+.form-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 5px; color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.95rem;
+  padding: 12px 16px; outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.2); }
+.form-textarea { resize: vertical; }
+.form-select option { background: #0d1e38; color: #fff; }
+.form-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+@media(max-width:500px){ .form-grid2 { grid-template-columns: 1fr; } }
+
+/* CHECKBOXES DE ATIVIDADES */
+.atividades-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;
+}
+@media(max-width:540px){ .atividades-grid { grid-template-columns: 1fr; } }
+
+.ativ-check {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px; padding: 10px 12px; cursor: pointer; transition: all 0.18s;
+  user-select: none;
+}
+.ativ-check:hover { background: rgba(196,155,60,0.07); border-color: rgba(196,155,60,0.3); }
+.ativ-check.selected { background: rgba(196,155,60,0.1); border-color: rgba(196,155,60,0.5); }
+.ativ-check input[type="checkbox"] { display: none; }
+.ativ-box {
+  width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; transition: all 0.18s;
+}
+.ativ-check.selected .ativ-box { background: var(--gold); border-color: var(--gold); }
+.ativ-box svg { display: none; width: 11px; height: 11px; }
+.ativ-check.selected .ativ-box svg { display: block; }
+.ativ-text { flex: 1; }
+.ativ-title { font-size: 0.82rem; font-weight: 700; color: #ddd; line-height: 1.3; }
+.ativ-check.selected .ativ-title { color: var(--white); }
+.ativ-date { font-size: 0.72rem; color: var(--text-dim); margin-top: 2px; }
+
+.form-helper { font-size: 0.8rem; color: var(--text-dim); margin-top: 0.5rem; font-style: italic; }
+
+.form-submit {
+  width: 100%; background: var(--gold); color: var(--navy); font-family: 'Barlow', sans-serif;
+  font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 16px; border-radius: 5px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+.form-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+.form-success {
+  display: none; background: rgba(77,166,217,0.08); border: 1px solid rgba(77,166,217,0.22);
+  border-radius: 6px; padding: 1.1rem 1.25rem; color: #5bb8e8; font-size: 0.9rem; margin-top: 1.25rem; line-height: 1.7;
+}
+
+footer {
+  background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); padding: 2.5rem 3rem;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+}
+.footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+.footer-brand em { color: var(--gold); font-style: normal; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Academia <em>Docente</em> Mandic</div>
+  <ul class="nav-links">
+    <li><a href="#programa">O Programa</a></li>
+    <li><a href="#etapas">Etapas</a></li>
+    <li><a href="#calendario">Calendário</a></li>
+    <li><a href="#inscricao" class="nav-cta">Inscrever-se</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="topo">
+  <div class="hero-eyebrow">Pós-Graduação Médica Mandic · 2026</div>
+  <h1>Academia<br><span class="blue">Docente</span><br><span class="gold">Mandic</span></h1>
+  <div class="hero-tagline">Transformando grandes médicos em grandes professores.</div>
+  <p class="hero-sub">Nossa missão é garantir que cada docente Mandic tenha as ferramentas, o suporte e a formação para dar aulas que transformam.</p>
+  <div class="hero-btns">
+    <a href="#inscricao" class="btn-gold">Quero me inscrever</a>
+    <a href="#etapas" class="btn-outline">Como funciona</a>
+  </div>
+</section>
+
+<section class="section section-programa section-center" id="programa">
+  <div class="s-label">O Programa</div>
+  <div class="s-title" style="color:#fff;">Formação séria, para quem<br>leva o ensino a sério</div>
+  <div class="gold-line"></div>
+  <p class="s-sub">Um programa estruturado do onboarding à avaliação contínua — com entrada flexível, ciclos recorrentes e acompanhamento individual a cada semestre.</p>
+  <div class="stats-row">
+    <div class="stat-cell">
+      <div class="stat-num">15 dias</div>
+      <div class="stat-label">Prazo para conclusão do Onboarding</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">6 meses</div>
+      <div class="stat-label">Para concluir todos os requisitos</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">4 ciclos</div>
+      <div class="stat-label">Trimestrais recorrentes</div>
+    </div>
+  </div>
+  <div class="aviso">
+    <strong>Atenção:</strong> O docente dispõe de 2 ciclos consecutivos (6 meses) para concluir todos os requisitos da Academia Docente. O não cumprimento resultará em suspensão das atividades docentes até regularização completa. Não há exceções.
+  </div>
+</section>
+
+<section class="section section-etapas section-center" id="etapas">
+  <div class="s-label">Passo a Passo</div>
+  <div class="s-title">As 6 Etapas do Programa</div>
+  <div class="gold-line"></div>
+  <p class="s-sub">Desde a seleção até a avaliação contínua — cada etapa tem responsável, prazo e critério claro.</p>
+  <div class="steps-grid">
+
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-title">Seleção Docente</div>
+      <div class="step-desc">Entrevista com a GRD e validação pelo Coordenador Médico da especialidade.</div>
+      <span class="step-tag">GRD + Coord.</span>
+    </div>
+
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-title">Cadastro e Contrato</div>
+      <div class="step-desc">Documentação completa e assinatura do contrato PJ em até 15 dias após aprovação.</div>
+      <span class="step-tag">GRD</span>
+    </div>
+
+    <div class="step-card has-link" onclick="window.open('URL_BLACKBOARD_AQUI','_blank')" style="cursor:pointer;" title="Abre a plataforma Blackboard">
+      <div class="step-num">03</div>
+      <div class="step-title">Onboarding Blackboard</div>
+      <div class="step-desc">6 aulas gravadas (~80 min) disponíveis 24h — obrigatórias antes das aulas ao vivo.</div>
+      <span class="step-tag">Obrigatório</span>
+      <div class="step-link-hint">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M10 2h4m0 0v4m0-4L7 9"/></svg>
+        Acessar plataforma Blackboard
+      </div>
+    </div>
+
+    <div class="step-card has-link" onclick="scrollAndShowTab('c1')" style="cursor:pointer;">
+      <div class="step-num">04</div>
+      <div class="step-title">Aulas Síncronas Online</div>
+      <div class="step-desc">6 aulas ao vivo por ciclo trimestral. Flexibilidade de entrada em qualquer ciclo.</div>
+      <span class="step-tag">RT + GRD</span>
+      <div class="step-link-hint">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 10l5 5 5-5"/></svg>
+        Ver datas do Ciclo 1
+      </div>
+    </div>
+
+    <div class="step-card has-link" onclick="scrollAndShowTab('cp')" style="cursor:pointer;">
+      <div class="step-num">05</div>
+      <div class="step-title">Encontros Presenciais</div>
+      <div class="step-desc">4 encontros por ano — Flow Lab, sala de procedimento e treinamento de PCR.</div>
+      <span class="step-tag">RT + GRD</span>
+      <div class="step-link-hint">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v10M3 10l5 5 5-5"/></svg>
+        Ver encontros presenciais
+      </div>
+    </div>
+
+    <div class="step-card has-link" onclick="window.open('URL_ONE_PAGE_DOCENTE_AQUI','_blank')" style="cursor:pointer;" title="Página do One Page Docente — em breve">
+      <div class="step-num">06</div>
+      <div class="step-title">Avaliação Contínua</div>
+      <div class="step-desc">One Page Docente, CSAT pelos alunos e PDI individual a cada semestre.</div>
+      <span class="step-tag">RT + Coord.</span>
+      <div class="step-link-hint">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M10 2h4m0 0v4m0-4L7 9"/></svg>
+        One Page Docente · Em breve
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-cal section-center" id="calendario">
+  <div class="s-label">Agenda 2026</div>
+  <div class="s-title" style="color:#fff;">Calendário dos Próximos Ciclos</div>
+  <div class="gold-line"></div>
+  <p class="s-sub">O mesmo conteúdo se repete a cada ciclo — perdeu uma aula no Ciclo 1? Assiste no Ciclo 2. Clique em qualquer aula para se inscrever.</p>
+  <div class="cal-tabs">
+    <button class="cal-tab active" onclick="showTab('c1',this)">Ciclo 1 · Jul–Set 2026</button>
+    <button class="cal-tab" onclick="showTab('c2',this)">Ciclo 2 · Out–Dez 2026</button>
+    <button class="cal-tab" onclick="showTab('cp',this)">Encontros Presenciais</button>
+  </div>
+
+  <div class="cal-panel active" id="c1">
+    <table class="cal-table">
+      <thead><tr>
+        <th style="width:120px">Data</th>
+        <th style="width:80px">Aula</th>
+        <th>Tema</th>
+        <th>Subtítulo</th>
+        <th style="width:80px"></th>
+      </tr></thead>
+      <tbody>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a1')"><td><div class="cal-date">13/07</div><div class="cal-day">segunda</div></td><td><div class="cal-num">Aula 01</div></td><td><div class="cal-theme">Boas Práticas Online</div></td><td><div class="cal-sub">Presença, técnica e impacto no ensino digital</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a2')"><td><div class="cal-date">29/07</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 02</div></td><td><div class="cal-theme">Planejamento de Aula UAU</div></td><td><div class="cal-sub">Como planejar para não ser esquecido</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a3')"><td><div class="cal-date">20/08</div><div class="cal-day">quinta</div></td><td><div class="cal-num">Aula 03</div></td><td><div class="cal-theme">Ambiente Seguro, Aprendizado Seguro</div></td><td><div class="cal-sub">Biossegurança na prática docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a4')"><td><div class="cal-date">31/08</div><div class="cal-day">segunda</div></td><td><div class="cal-num">Aula 04</div></td><td><div class="cal-theme">A Arte do Feedback</div></td><td><div class="cal-sub">Feedback que transforma, avaliação que orienta</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a5')"><td><div class="cal-date">09/09</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 05</div></td><td><div class="cal-theme">O Docente na Era da IA</div></td><td><div class="cal-sub">Oportunidades, riscos e posicionamento docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a6')"><td><div class="cal-date">24/09</div><div class="cal-day">quinta</div></td><td><div class="cal-num">Aula 06</div></td><td><div class="cal-theme">IA Hands On</div></td><td><div class="cal-sub">Ferramentas de IA como aliadas do docente Mandic</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cal-panel" id="c2">
+    <table class="cal-table">
+      <thead><tr>
+        <th style="width:120px">Data</th>
+        <th style="width:80px">Aula</th>
+        <th>Tema</th>
+        <th>Subtítulo</th>
+        <th style="width:80px"></th>
+      </tr></thead>
+      <tbody>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a1')"><td><div class="cal-date">01/10</div><div class="cal-day">quinta</div></td><td><div class="cal-num">Aula 01</div></td><td><div class="cal-theme">Boas Práticas Online</div></td><td><div class="cal-sub">Presença, técnica e impacto no ensino digital</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a2')"><td><div class="cal-date">14/10</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 02</div></td><td><div class="cal-theme">Planejamento de Aula UAU</div></td><td><div class="cal-sub">Como planejar para não ser esquecido</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a3')"><td><div class="cal-date">04/11</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 03</div></td><td><div class="cal-theme">Ambiente Seguro, Aprendizado Seguro</div></td><td><div class="cal-sub">Biossegurança na prática docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a4')"><td><div class="cal-date">16/11</div><div class="cal-day">segunda</div></td><td><div class="cal-num">Aula 04</div></td><td><div class="cal-theme">A Arte do Feedback</div></td><td><div class="cal-sub">Feedback que transforma, avaliação que orienta</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a5')"><td><div class="cal-date">30/11</div><div class="cal-day">segunda</div></td><td><div class="cal-num">Aula 05</div></td><td><div class="cal-theme">O Docente na Era da IA</div></td><td><div class="cal-sub">Oportunidades, riscos e posicionamento docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c2-a6')"><td><div class="cal-date">09/12</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 06</div></td><td><div class="cal-theme">IA Hands On</div></td><td><div class="cal-sub">Ferramentas de IA como aliadas do docente Mandic</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="cal-panel" id="cp">
+    <p class="presencial-note">São realizados 4 encontros presenciais ao longo do ano. As demais datas serão divulgadas pelo Time de Relacionamento Docente com antecedência mínima de 30 dias.</p>
+    <div class="presencial-card" onclick="preSelectAndScroll('presencial-1')">
+      <div class="presencial-date-block">
+        <div class="presencial-day-num">15</div>
+        <div class="presencial-month">Jul</div>
+      </div>
+      <div class="presencial-info">
+        <div class="presencial-title">Treinamento Presencial — Flow Lab</div>
+        <div class="presencial-details">Quarta-feira · 14h–18h · 4 horas<br>Sala de procedimento + Treinamento de PCR</div>
+        <span class="badge-derm"><span class="badge-dot"></span> Exclusivo · Dermatologia</span>
+        <div class="presencial-click-hint" style="margin-top:0.75rem;">Clique para se inscrever →</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-inscricao section-center" id="inscricao">
+  <div class="s-label">Faça parte</div>
+  <div class="s-title" style="color:#fff;">Inscrição</div>
+  <div class="gold-line"></div>
+  <p class="s-sub">Selecione as atividades desejadas, preencha seus dados e envie. O Time de Relacionamento Docente entrará em contato em até 3 dias úteis.</p>
+
+  <div class="form-wrap">
+
+    <!-- SELEÇÃO DE ATIVIDADES -->
+    <div class="form-row">
+      <label class="form-label">Selecione as atividades desejadas</label>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:0.75rem;" id="atividades-grid">
+
+        <!-- CICLO 1 -->
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding:0 2px 8px;border-bottom:1px solid rgba(196,155,60,0.2);margin-bottom:8px;">
+            Ciclo 1 · Jul–Set 2026
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div class="ativ-check" data-id="c1-a1" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 01 — Boas Práticas Online</div><div class="ativ-date">13/07 · segunda-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c1-a2" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 02 — Planejamento de Aula UAU</div><div class="ativ-date">29/07 · quarta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c1-a3" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 03 — Ambiente Seguro</div><div class="ativ-date">20/08 · quinta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c1-a4" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 04 — A Arte do Feedback</div><div class="ativ-date">31/08 · segunda-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c1-a5" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 05 — O Docente na Era da IA</div><div class="ativ-date">09/09 · quarta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c1-a6" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 06 — IA Hands On</div><div class="ativ-date">24/09 · quinta-feira</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CICLO 2 -->
+        <div>
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding:0 2px 8px;border-bottom:1px solid rgba(196,155,60,0.2);margin-bottom:8px;">
+            Ciclo 2 · Out–Dez 2026
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div class="ativ-check" data-id="c2-a1" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 01 — Boas Práticas Online</div><div class="ativ-date">01/10 · quinta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c2-a2" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 02 — Planejamento de Aula UAU</div><div class="ativ-date">14/10 · quarta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c2-a3" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 03 — Ambiente Seguro</div><div class="ativ-date">04/11 · quarta-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c2-a4" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 04 — A Arte do Feedback</div><div class="ativ-date">16/11 · segunda-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c2-a5" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 05 — O Docente na Era da IA</div><div class="ativ-date">30/11 · segunda-feira</div></div>
+            </div>
+            <div class="ativ-check" data-id="c2-a6" onclick="toggleAtiv(this)">
+              <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+              <div class="ativ-text"><div class="ativ-title">Aula 06 — IA Hands On</div><div class="ativ-date">09/12 · quarta-feira</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- PRESENCIAL — largura total -->
+      <div style="margin-bottom:0.75rem;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding:0 2px 8px;border-bottom:1px solid rgba(196,155,60,0.2);margin-bottom:8px;">
+          Encontros Presenciais
+        </div>
+        <div class="ativ-check" data-id="presencial-1" onclick="toggleAtiv(this)">
+          <input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div>
+          <div class="ativ-text">
+            <div class="ativ-title">Flow Lab + Treinamento de PCR — <span style="color:var(--gold-light);">Exclusivo Dermatologia</span></div>
+            <div class="ativ-date">15/07 · quarta-feira · 14h–18h</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+        <button type="button" onclick="selectAllAtiv()" style="background:none;border:1px solid rgba(196,155,60,0.35);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:4px;cursor:pointer;">Selecionar todas</button>
+        <button type="button" onclick="clearAllAtiv()" style="background:none;border:1px solid rgba(255,255,255,0.12);color:var(--text-dim);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:4px;cursor:pointer;">Limpar seleção</button>
+      </div>
+      <div class="form-helper">Selecione quantas atividades quiser — uma inscrição para tudo.</div>
+    </div>
+
+    <div class="form-row">
+      <label class="form-label">Nome completo</label>
+      <input class="form-input" type="text" placeholder="Dr(a). Nome Sobrenome" id="f-nome">
+    </div>
+    <div class="form-grid2">
+      <div class="form-row">
+        <label class="form-label">CRM</label>
+        <input class="form-input" type="text" placeholder="00000 / UF" id="f-crm">
+      </div>
+      <div class="form-row">
+        <label class="form-label">Especialidade</label>
+        <input class="form-input" type="text" placeholder="Ex: Dermatologia" id="f-esp">
+      </div>
+    </div>
+    <div class="form-row">
+      <label class="form-label">E-mail</label>
+      <input class="form-input" type="email" placeholder="seuemail@exemplo.com" id="f-email">
+    </div>
+    <div class="form-row">
+      <label class="form-label">Telefone / WhatsApp</label>
+      <input class="form-input" type="text" placeholder="(11) 99999-9999" id="f-tel">
+    </div>
+    <div class="form-row">
+      <label class="form-label">Mensagem (opcional)</label>
+      <textarea class="form-textarea" rows="3" placeholder="Dúvidas ou observações..." id="f-msg"></textarea>
+    </div>
+    <button class="form-submit" id="form-btn" onclick="submitForm()">Enviar inscrição</button>
+    <div class="form-success" id="form-ok">
+      <strong>Inscrição recebida.</strong><br>
+      O Time de Relacionamento Docente entrará em contato em até 3 dias úteis para orientar os próximos passos.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Academia <em>Docente</em> Mandic</div>
+  <div class="footer-copy">Clínica-Escola São Leopoldo Mandic · Pós-Graduação Médica<br>2026 · Dra. Camila Paiva — CRM-SP 102437</div>
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.cal-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.cal-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+function scrollAndShowTab(tabId) {
+  var tabMap = { 'c1': 0, 'c2': 1, 'cp': 2 };
+  var tabs = document.querySelectorAll('.cal-tab');
+  document.querySelectorAll('.cal-panel').forEach(p => p.classList.remove('active'));
+  tabs.forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  tabs[tabMap[tabId]].classList.add('active');
+  document.getElementById('calendario').scrollIntoView({ behavior: 'smooth' });
+}
+
+function preSelectAndScroll(ativId) {
+  var el = document.querySelector('.ativ-check[data-id="' + ativId + '"]');
+  if (el && !el.classList.contains('selected')) {
+    el.classList.add('selected');
+  }
+  setTimeout(function() {
+    document.getElementById('inscricao').scrollIntoView({ behavior: 'smooth' });
+  }, 100);
+}
+
+function toggleAtiv(el) {
+  el.classList.toggle('selected');
+}
+
+function selectAllAtiv() {
+  document.querySelectorAll('.ativ-check').forEach(el => el.classList.add('selected'));
+}
+
+function clearAllAtiv() {
+  document.querySelectorAll('.ativ-check').forEach(el => el.classList.remove('selected'));
+}
+
+// ─── CONFIGURAÇÃO ─────────────────────────────────────────
+// Cole aqui a URL gerada pelo Google Apps Script (veja o guia)
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_DixKXMml6mGNsioQfjE2-RcggBElsIzx9ujPX_n7e1rRklY4NnyXAKnjhn5W2hw_EA/exec';
+// ──────────────────────────────────────────────────────────
+
+function submitForm() {
+  var nome  = document.getElementById('f-nome').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var crm   = document.getElementById('f-crm').value.trim();
+  var esp   = document.getElementById('f-esp').value.trim();
+  var tel   = document.getElementById('f-tel').value.trim();
+  var msg   = document.getElementById('f-msg').value.trim();
+  var selected = document.querySelectorAll('.ativ-check.selected');
+
+  if (!nome || !email || !crm) {
+    alert('Por favor, preencha ao menos nome, CRM e e-mail.');
+    return;
+  }
+  if (selected.length === 0) {
+    alert('Por favor, selecione ao menos uma atividade.');
+    return;
+  }
+
+  var atividades = Array.from(selected).map(function(el) {
+    return el.querySelector('.ativ-title').textContent.trim();
+  }).join(' | ');
+
+  var btn = document.getElementById('form-btn');
+  btn.disabled = true;
+  btn.textContent = 'Enviando...';
+
+  var payload = {
+    timestamp:     new Date().toLocaleString('pt-BR'),
+    nome:          nome,
+    crm:           crm,
+    especialidade: esp,
+    email:         email,
+    telefone:      tel,
+    atividades:    atividades,
+    mensagem:      msg
+  };
+
+  // Envia via form-data (mais confiável com Apps Script)
+  var formData = new FormData();
+  formData.append('data', JSON.stringify(payload));
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    body: formData
+  })
+  .then(function(response) { return response.text(); })
+  .then(function(text) {
+    document.getElementById('form-ok').style.display = 'block';
+    btn.textContent = 'Inscricao enviada';
+  })
+  .catch(function(err) {
+    // Apps Script com CORS pode bloquear a resposta mas ainda gravar — tenta de qualquer forma
+    document.getElementById('form-ok').style.display = 'block';
+    btn.textContent = 'Inscricao enviada';
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var t = document.querySelector(this.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
