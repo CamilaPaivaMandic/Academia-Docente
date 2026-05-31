@@ -624,7 +624,7 @@ function clearAllAtiv() {
 
 // ─── CONFIGURAÇÃO ─────────────────────────────────────────
 // Cole aqui a URL gerada pelo Google Apps Script (veja o guia)
-var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxIetrQ1O4NNzCFsM3FN89HZTrv79KNMxRSIHl2Bv3qDMXYq4cJX6mXsrncE9BTFwfBLg/exec';
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdL5YdWvj4GlcTWBrW1Ktmo0BcgJRcZz8INppj3YqoB4pDCSJ5zmIU5wYlt8mWwvyFfQ/exec';
 // ──────────────────────────────────────────────────────────
 
 function submitForm() {
@@ -664,14 +664,35 @@ function submitForm() {
     mensagem:      msg
   };
 
-  // Envia payload como form parameter
-  var formData = new FormData();
-  formData.append('payload', JSON.stringify(payload));
+  // Uma requisição por atividade selecionada
+  var ativList = Array.from(selected).map(function(el) {
+    return {
+      titulo: el.querySelector('.ativ-title').textContent.trim(),
+      data:   el.querySelector('.ativ-date').textContent.trim()
+    };
+  });
 
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    body: formData
-  })
+  var base = {
+    timestamp:     payload.timestamp,
+    nome:          payload.nome,
+    crm:           payload.crm,
+    especialidade: payload.especialidade,
+    email:         payload.email,
+    telefone:      payload.telefone,
+    mensagem:      payload.mensagem
+  };
+
+  var promises = ativList.map(function(ativ) {
+    var row = Object.assign({}, base, {
+      atividade:    ativ.titulo,
+      data_aula:    ativ.data
+    });
+    var fd = new FormData();
+    fd.append('payload', JSON.stringify(row));
+    return fetch(SCRIPT_URL, { method: 'POST', body: fd });
+  });
+
+  Promise.all(promises)
   .then(function() {
     document.getElementById('form-ok').style.display = 'block';
     btn.textContent = 'Inscricao enviada';
