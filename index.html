@@ -22,7 +22,7 @@
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e0; font-size: 16px; line-height: 1.6; }
- 
+
 /* ═══════════════════════════════════════
    AUTH OVERLAY
 ═══════════════════════════════════════ */
@@ -34,7 +34,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e
   transition: opacity 0.4s ease;
 }
 #auth-overlay.hide { opacity: 0; pointer-events: none; }
- 
+
 .auth-box {
   width: 100%; max-width: 420px;
   background: var(--navy-mid);
@@ -47,23 +47,23 @@ body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e
 .auth-logo-title em { color: var(--gold); font-style: normal; }
 .auth-logo-sub { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-dim); margin-top: 4px; }
 .auth-divider { width: 32px; height: 2px; background: var(--gold); margin: 0.75rem auto 0; }
- 
+
 .auth-tabs { display: flex; border-bottom: 1px solid var(--border-white); margin-bottom: 1.75rem; }
 .auth-tab { flex: 1; padding: 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); cursor: pointer; border: none; border-bottom: 2px solid transparent; margin-bottom: -1px; background: none; transition: all 0.2s; }
 .auth-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
 .auth-panel { display: none; }
 .auth-panel.active { display: block; }
- 
+
 .auth-field { margin-bottom: 1.1rem; }
 .auth-label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.45rem; }
 .auth-input { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; color: var(--white); font-family: 'Barlow', sans-serif; font-size: 0.95rem; padding: 11px 14px; outline: none; transition: border-color 0.2s; }
 .auth-input:focus { border-color: var(--gold); }
 .auth-input::placeholder { color: rgba(255,255,255,0.2); }
- 
+
 .auth-btn { width: 100%; background: var(--gold); color: var(--navy); font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; padding: 14px; border-radius: 5px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 0.5rem; }
 .auth-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
 .auth-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
- 
+
 .auth-error { display: none; background: rgba(220,60,60,0.1); border: 1px solid rgba(220,60,60,0.3); border-radius: 5px; padding: 0.7rem 1rem; color: #f88; font-size: 0.83rem; margin-top: 0.9rem; line-height: 1.5; text-align: center; }
 .auth-error.show { display: block; }
 .auth-success { display: none; background: rgba(77,166,217,0.08); border: 1px solid rgba(77,166,217,0.22); border-radius: 5px; padding: 0.7rem 1rem; color: #5bb8e8; font-size: 0.83rem; margin-top: 0.9rem; line-height: 1.5; text-align: center; }
@@ -75,7 +75,7 @@ body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e
 .auth-loading.show { display: block; }
 .spinner { display: inline-block; width: 18px; height: 18px; border: 2px solid rgba(196,155,60,0.3); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 6px; }
 @keyframes spin { to { transform: rotate(360deg); } }
- 
+
 /* ═══════════════════════════════════════
    USER BAR
 ═══════════════════════════════════════ */
@@ -84,10 +84,10 @@ body { font-family: 'Barlow', sans-serif; background: var(--navy); color: #e0e0e
 #user-bar-email { font-weight: 600; color: rgba(196,155,60,0.8); }
 #btn-logout { background: none; border: 1px solid rgba(255,255,255,0.15); color: var(--text-dim); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; cursor: pointer; transition: all 0.2s; }
 #btn-logout:hover { border-color: rgba(220,60,60,0.5); color: #f88; }
- 
+
 #main-content { display: none; }
 #main-content.show { display: block; }
- 
+
 /* ═══════════════════════════════════════
    NAV
 ═══════════════════════════════════════ */
@@ -99,7 +99,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .nav-links a:hover { color: var(--gold); }
 .nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 8px 20px; border-radius: 4px; font-weight: 700 !important; }
 .nav-cta:hover { background: var(--gold-light) !important; }
- 
+
 /* ═══════════════════════════════════════
    HERO
 ═══════════════════════════════════════ */
@@ -118,7 +118,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
 .btn-outline { background: transparent; color: rgba(255,255,255,0.7); font-family: 'Barlow', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 15px 36px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.18); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
 .btn-outline:hover { border-color: rgba(255,255,255,0.45); color: #fff; }
- 
+
 /* ═══════════════════════════════════════
    SECTIONS
 ═══════════════════════════════════════ */
@@ -130,7 +130,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .s-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: clamp(2rem,4vw,2.8rem); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.05; margin-bottom: 0.6rem; }
 .s-sub { font-size: 1rem; color: var(--text-muted); max-width: 540px; line-height: 1.75; margin-bottom: 3rem; }
 .gold-line { width: 40px; height: 2px; background: var(--gold); margin: 0.6rem 0 1.75rem; }
- 
+
 .section-programa { background: var(--navy-mid); border-top: 1px solid var(--border-gold); border-bottom: 1px solid var(--border-gold); }
 .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border-gold); border: 1px solid var(--border-gold); border-radius: 8px; overflow: hidden; max-width: 760px; margin: 0 auto 3rem; }
 .stat-cell { background: var(--navy-light); padding: 2rem 1.5rem; text-align: center; }
@@ -138,7 +138,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .stat-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); }
 .aviso { background: rgba(196,155,60,0.07); border: 1px solid rgba(196,155,60,0.25); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; max-width: 680px; margin: 0 auto; text-align: left; }
 .aviso strong { color: rgba(196,155,60,0.9); }
- 
+
 /* ═══════════════════════════════════════
    ETAPAS — fundo dourado, cards brancos com borda azul
 ═══════════════════════════════════════ */
@@ -147,10 +147,10 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .section-etapas .s-title { color: var(--navy); }
 .section-etapas .s-sub { color: rgba(9,21,42,0.65); }
 .section-etapas .gold-line { background: var(--navy); opacity: 0.2; }
- 
+
 .steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 960px; margin: 0 auto; }
 @media(max-width:720px){ .steps-grid { grid-template-columns: 1fr; } }
- 
+
 .step-card { background: rgba(255,255,255,0.92); border: none; border-top: 4px solid var(--blue-accent); border-radius: 8px; padding: 1.75rem 1.5rem; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; cursor: default; box-shadow: 0 2px 12px rgba(9,21,42,0.12); }
 .step-card:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 6px 24px rgba(9,21,42,0.18); }
 .step-card.has-link { cursor: pointer; }
@@ -160,7 +160,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .step-tag { display: none; }
 .step-link-hint { display: flex; align-items: center; gap: 4px; margin-top: 0.75rem; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue-accent); opacity: 0.8; }
 .step-link-hint svg { width: 12px; height: 12px; flex-shrink: 0; }
- 
+
 /* ═══════════════════════════════════════
    CALENDÁRIO
 ═══════════════════════════════════════ */
@@ -185,7 +185,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .cal-theme { font-weight: 600; color: #ddd; font-size: 0.95rem; transition: color 0.15s; }
 .cal-sub { font-size: 0.78rem; color: var(--text-dim); margin-top: 3px; }
 .cal-row-hint { font-size: 10px; color: rgba(196,155,60,0.45); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
- 
+
 .presencial-note { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1.5rem; text-align: center; font-style: italic; }
 .presencial-card { background: rgba(196,155,60,0.07); border: 1px solid rgba(196,155,60,0.25); border-radius: 10px; padding: 2rem; display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap; max-width: 680px; margin: 0 auto; cursor: pointer; transition: background 0.2s; }
 .presencial-card:hover { background: rgba(196,155,60,0.12); }
@@ -198,7 +198,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .badge-derm { display: inline-flex; align-items: center; gap: 6px; background: rgba(196,155,60,0.12); border: 1px solid rgba(196,155,60,0.4); color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; }
 .badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; display: inline-block; flex-shrink: 0; }
 .presencial-click-hint { font-size: 11px; color: rgba(196,155,60,0.5); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.6rem; }
- 
+
 /* ═══════════════════════════════════════
    INSCRIÇÃO
 ═══════════════════════════════════════ */
@@ -229,7 +229,7 @@ nav { background: rgba(9,21,42,0.96); backdrop-filter: blur(8px); border-bottom:
 .form-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
 .form-submit:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 .form-success { display: none; background: rgba(77,166,217,0.08); border: 1px solid rgba(77,166,217,0.22); border-radius: 6px; padding: 1.1rem 1.25rem; color: #5bb8e8; font-size: 0.9rem; margin-top: 1.25rem; line-height: 1.7; }
- 
+
 footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .footer-brand { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 .footer-brand em { color: var(--gold); font-style: normal; }
@@ -237,7 +237,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
 </style>
 </head>
 <body>
- 
+
 <!-- AUTH OVERLAY -->
 <div id="auth-overlay">
   <div class="auth-box">
@@ -273,16 +273,16 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     </div>
   </div>
 </div>
- 
+
 <!-- USER BAR -->
 <div id="user-bar">
   <span>Olá, <span id="user-bar-email"></span></span>
   <button id="btn-logout" onclick="doLogout()">Sair</button>
 </div>
- 
+
 <!-- CONTEÚDO PRINCIPAL -->
 <div id="main-content">
- 
+
 <nav>
   <div class="nav-brand">Academia <em>Docente</em> Mandic</div>
   <ul class="nav-links">
@@ -292,7 +292,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     <li><a href="#inscricao" class="nav-cta">Inscrever-se</a></li>
   </ul>
 </nav>
- 
+
 <section class="hero" id="topo">
   <div class="hero-eyebrow">Pós-Graduação Médica Mandic · 2026</div>
   <h1>Academia<br><span class="blue">Docente</span><br><span class="gold">Mandic</span></h1>
@@ -303,7 +303,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     <a href="#etapas" class="btn-outline">Como funciona</a>
   </div>
 </section>
- 
+
 <section class="section section-programa section-center" id="programa">
   <div class="s-label">O Programa</div>
   <div class="s-title" style="color:#fff;">Formação séria, para quem<br>leva o ensino a sério</div>
@@ -318,7 +318,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     <strong>Atenção:</strong> O docente dispõe de 2 ciclos consecutivos (6 meses) para concluir todos os requisitos da Academia Docente. O não cumprimento resultará em suspensão das atividades docentes até regularização completa.
   </div>
 </section>
- 
+
 <section class="section section-etapas section-center" id="etapas">
   <div class="s-label">Passo a Passo</div>
   <div class="s-title">As 6 Etapas do Programa</div>
@@ -361,7 +361,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     </div>
   </div>
 </section>
- 
+
 <section class="section section-cal section-center" id="calendario">
   <div class="s-label">Agenda 2026</div>
   <div class="s-title" style="color:#fff;">Calendário dos Próximos Ciclos</div>
@@ -372,7 +372,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     <button class="cal-tab" onclick="showTab('c2',this)">Ciclo 2 · Out–Dez 2026</button>
     <button class="cal-tab" onclick="showTab('cp',this)">Encontros Presenciais</button>
   </div>
- 
+
   <div class="cal-panel active" id="c1">
     <table class="cal-table">
       <thead><tr><th style="width:120px">Data</th><th style="width:80px">Aula</th><th>Tema</th><th>Subtítulo</th><th style="width:80px"></th></tr></thead>
@@ -382,11 +382,11 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
         <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a3')"><td><div class="cal-date">20/08</div><div class="cal-day">quinta</div></td><td><div class="cal-num">Aula 03</div></td><td><div class="cal-theme">Ambiente Seguro, Aprendizado Seguro</div></td><td><div class="cal-sub">Biossegurança na prática docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
         <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a4')"><td><div class="cal-date">31/08</div><div class="cal-day">segunda</div></td><td><div class="cal-num">Aula 04</div></td><td><div class="cal-theme">A Arte do Feedback</div></td><td><div class="cal-sub">Feedback que transforma, avaliação que orienta</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
         <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a5')"><td><div class="cal-date">09/09</div><div class="cal-day">quarta</div></td><td><div class="cal-num">Aula 05</div></td><td><div class="cal-theme">O Docente na Era da IA</div></td><td><div class="cal-sub">Oportunidades, riscos e posicionamento docente</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
-        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a6')"><td><div class="cal-date">24/09</div><div class="cal-day">quinta</div></td><td><div class="cal-num">Aula 06</div></td><td><div class="cal-theme">IA Hands On</div></td><td><div class="cal-sub">Ferramentas de IA como aliadas do docente Mandic</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
+        <tr class="cal-row-link" onclick="preSelectAndScroll('c1-a6')"><td><div class="cal-date">23/09</div><div class="cal-day">terça</div></td><td><div class="cal-num">Aula 06</div></td><td><div class="cal-theme">IA Hands On</div></td><td><div class="cal-sub">Ferramentas de IA como aliadas do docente Mandic</div></td><td><div class="cal-row-hint">Inscrever-se →</div></td></tr>
       </tbody>
     </table>
   </div>
- 
+
   <div class="cal-panel" id="c2">
     <table class="cal-table">
       <thead><tr><th style="width:120px">Data</th><th style="width:80px">Aula</th><th>Tema</th><th>Subtítulo</th><th style="width:80px"></th></tr></thead>
@@ -400,11 +400,11 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
       </tbody>
     </table>
   </div>
- 
+
   <div class="cal-panel" id="cp">
     <p class="presencial-note">São realizados 4 encontros presenciais ao longo do ano. As demais datas serão divulgadas pelo Time de Relacionamento Docente com antecedência mínima de 30 dias.</p>
     <div style="display:flex;flex-direction:column;gap:1.25rem;max-width:680px;margin:0 auto;">
- 
+
       <div class="presencial-card" onclick="preSelectAndScroll('presencial-1')">
         <div class="presencial-date-block"><div class="presencial-day-num">15</div><div class="presencial-month">Jul</div></div>
         <div class="presencial-info">
@@ -420,22 +420,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
           <div class="presencial-click-hint" style="margin-top:0.75rem;">Clique para se inscrever →</div>
         </div>
       </div>
- 
-      <div class="presencial-card" onclick="preSelectAndScroll('presencial-2')">
-        <div class="presencial-date-block"><div class="presencial-day-num">16</div><div class="presencial-month">Set</div></div>
-        <div class="presencial-info">
-          <div class="presencial-title">Treinamento Atendimento Clínico</div>
-          <div class="presencial-details">Quarta-feira · 14h–18h · 4 horas</div>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.75rem;">
-            <span class="badge-derm"><span class="badge-dot"></span>Perfil Docente</span>
-            <span class="badge-derm"><span class="badge-dot"></span>Liderança em Sala de Aula</span>
-            <span class="badge-derm"><span class="badge-dot"></span>Supervisão de Atendimento Clínico</span>
-          </div>
-          <span class="badge-derm" style="background:rgba(196,155,60,0.18);border-color:rgba(196,155,60,0.6);"><span class="badge-dot"></span>Exclusivo · Especialidades Clínicas</span>
-          <div class="presencial-click-hint" style="margin-top:0.75rem;">Clique para se inscrever →</div>
-        </div>
-      </div>
- 
+
       <div class="presencial-card" onclick="preSelectAndScroll('presencial-3')">
         <div class="presencial-date-block"><div class="presencial-day-num">14</div><div class="presencial-month">Nov</div></div>
         <div class="presencial-info">
@@ -450,11 +435,11 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
           <div class="presencial-click-hint" style="margin-top:0.75rem;">Clique para se inscrever →</div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </section>
- 
+
 <section class="section section-inscricao section-center" id="inscricao">
   <div class="s-label">Faça parte</div>
   <div class="s-title" style="color:#fff;">Inscrição</div>
@@ -472,7 +457,7 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
             <div class="ativ-check" data-id="c1-a3" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Aula 03 — Ambiente Seguro</div><div class="ativ-date">20/08 · quinta-feira</div></div></div>
             <div class="ativ-check" data-id="c1-a4" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Aula 04 — A Arte do Feedback</div><div class="ativ-date">31/08 · segunda-feira</div></div></div>
             <div class="ativ-check" data-id="c1-a5" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Aula 05 — O Docente na Era da IA</div><div class="ativ-date">09/09 · quarta-feira</div></div></div>
-            <div class="ativ-check" data-id="c1-a6" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Aula 06 — IA Hands On</div><div class="ativ-date">24/09 · quinta-feira</div></div></div>
+            <div class="ativ-check" data-id="c1-a6" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Aula 06 — IA Hands On</div><div class="ativ-date">23/09 · terça-feira</div></div></div>
           </div>
         </div>
         <div>
@@ -491,7 +476,6 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
         <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);padding:0 2px 8px;border-bottom:1px solid rgba(196,155,60,0.2);margin-bottom:8px;">Encontros Presenciais</div>
         <div style="display:flex;flex-direction:column;gap:6px;">
           <div class="ativ-check" data-id="presencial-1" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Flow Lab + PCR — <span style="color:var(--gold-light);">Exclusivo Dermatologia</span></div><div class="ativ-date">15/07 · quarta-feira · 14h–18h</div></div></div>
-          <div class="ativ-check" data-id="presencial-2" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Treinamento Atendimento Clínico — <span style="color:var(--gold-light);">Exclusivo Especialidades Clínicas</span></div><div class="ativ-date">16/09 · quarta-feira · 14h–18h</div></div></div>
           <div class="ativ-check" data-id="presencial-3" onclick="toggleAtiv(this)"><input type="checkbox"><div class="ativ-box"><svg viewBox="0 0 12 10" fill="none" stroke="#09152a" stroke-width="2.2"><polyline points="1,5 4.5,8.5 11,1"/></svg></div><div class="ativ-text"><div class="ativ-title">Treinamento Atendimento Clínico — <span style="color:var(--gold-light);">Exclusivo Especialidades Clínicas</span></div><div class="ativ-date">14/11 · sábado · 9h–13h</div></div></div>
         </div>
       </div>
@@ -513,19 +497,19 @@ footer { background: #060e1c; border-top: 1px solid rgba(196,155,60,0.1); paddin
     <div class="form-success" id="form-ok"><strong>Inscrição recebida.</strong><br>O Time de Relacionamento Docente entrará em contato em até 3 dias úteis para orientar os próximos passos.</div>
   </div>
 </section>
- 
+
 <footer>
   <div class="footer-brand">Academia <em>Docente</em> Mandic</div>
   <div class="footer-copy">Clínica-Escola São Leopoldo Mandic · Pós-Graduação Médica<br>2026 · Dra. Camila Paiva — CRM-SP 102437</div>
 </footer>
- 
+
 </div><!-- /main-content -->
- 
+
 <!-- FIREBASE -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, sendPasswordResetEmail, updateProfile } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
- 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBDXDaQi59whx46FvqaJH0x6dJbKSTkTUc",
   authDomain: "academia-docente-mandic.firebaseapp.com",
@@ -534,10 +518,10 @@ const firebaseConfig = {
   messagingSenderId: "126085028610",
   appId: "1:126085028610:web:8bdda4ad9187414810c01b"
 };
- 
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
- 
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     document.getElementById('auth-overlay').classList.add('hide');
@@ -554,7 +538,7 @@ onAuthStateChanged(auth, (user) => {
     document.getElementById('user-bar').classList.remove('show');
   }
 });
- 
+
 window.doLogin = async function() {
   const email = document.getElementById('login-email').value.trim();
   const senha = document.getElementById('login-senha').value;
@@ -567,7 +551,7 @@ window.doLogin = async function() {
   try { await signInWithEmailAndPassword(auth, email, senha); }
   catch(e) { loadEl.classList.remove('show'); btn.disabled = false; errEl.textContent = traduzirErro(e.code); errEl.classList.add('show'); }
 };
- 
+
 window.doCadastro = async function() {
   const nome = document.getElementById('cad-nome').value.trim();
   const email = document.getElementById('cad-email').value.trim();
@@ -584,9 +568,9 @@ window.doCadastro = async function() {
   try { const cred = await createUserWithEmailAndPassword(auth, email, senha); await updateProfile(cred.user, { displayName: nome }); }
   catch(e) { loadEl.classList.remove('show'); btn.disabled = false; errEl.textContent = traduzirErro(e.code); errEl.classList.add('show'); }
 };
- 
+
 window.doLogout = async function() { await signOut(auth); };
- 
+
 window.forgotPassword = async function() {
   const email = document.getElementById('login-email').value.trim();
   const sucEl = document.getElementById('login-success');
@@ -596,13 +580,13 @@ window.forgotPassword = async function() {
   try { await sendPasswordResetEmail(auth, email); sucEl.textContent = 'Link enviado! Verifique sua caixa de entrada.'; sucEl.classList.add('show'); }
   catch(e) { errEl.textContent = traduzirErro(e.code); errEl.classList.add('show'); }
 };
- 
+
 function traduzirErro(code) {
   const erros = { 'auth/invalid-email':'E-mail inválido.','auth/user-not-found':'Nenhuma conta encontrada com este e-mail.','auth/wrong-password':'Senha incorreta.','auth/invalid-credential':'E-mail ou senha incorretos.','auth/email-already-in-use':'Este e-mail já está cadastrado.','auth/weak-password':'Senha muito fraca. Use ao menos 6 caracteres.','auth/too-many-requests':'Muitas tentativas. Aguarde alguns minutos.','auth/network-request-failed':'Erro de conexão. Verifique sua internet.' };
   return erros[code] || 'Erro inesperado. Tente novamente.';
 }
 </script>
- 
+
 <script>
 function switchAuthTab(tab, btn) {
   document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
@@ -633,9 +617,9 @@ function preSelectAndScroll(ativId) {
 function toggleAtiv(el) { el.classList.toggle('selected'); }
 function selectAllAtiv() { document.querySelectorAll('.ativ-check').forEach(el => el.classList.add('selected')); }
 function clearAllAtiv() { document.querySelectorAll('.ativ-check').forEach(el => el.classList.remove('selected')); }
- 
+
 var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdL5YdWvj4GlcTWBrW1Ktmo0BcgJRcZz8INppj3YqoB4pDCSJ5zmIU5wYlt8mWwvyFfQ/exec';
- 
+
 function submitForm() {
   var nome = document.getElementById('f-nome').value.trim();
   var email = document.getElementById('f-email').value.trim();
@@ -657,7 +641,7 @@ function submitForm() {
   });
   Promise.all(promises).then(function(){ document.getElementById('form-ok').style.display='block'; btn.textContent='Inscrição enviada'; }).catch(function(){ document.getElementById('form-ok').style.display='block'; btn.textContent='Inscrição enviada'; });
 }
- 
+
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     var loginPanel = document.getElementById('auth-login');
@@ -676,4 +660,3 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 </script>
 </body>
 </html>
- 
